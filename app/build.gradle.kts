@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.navigation.safearg)
+    alias(libs.plugins.hilt.android)
+    id("kotlin-kapt")
 }
 
 android {
@@ -33,6 +36,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+//    buildFeatures {
+//        viewBinding = true
+//        dataBinding = true
+//    }
 }
 
 dependencies {
@@ -42,9 +49,76 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    testImplementation(libs.truth)
-    androidTestImplementation(libs.truth)
+
+
+    //hilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
+    implementation(libs.androidx.work.runtime.ktx)
+    implementation (libs.androidx.hilt.lifecycle.viewmodel)
+    kapt (libs.androidx.hilt.compiler)
+
+    // Timber
+    implementation (libs.timber)
+
+    //navigation
+    implementation(libs.navigation.fragment.ktx)
+    implementation(libs.navigation.ui.ktx)
+
+    // Architectural Components
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+
+    // Lifecycle
+    implementation (libs.androidx.lifecycle.extensions)
+    implementation (libs.androidx.lifecycle.livedata.ktx)
+    implementation (libs.androidx.lifecycle.runtime)
+
+    // Activity KTX for viewModels()
+    implementation (libs.androidx.activity.ktx)
+
+    // Room
+    implementation(libs.androidx.room.runtime)
+    kapt(libs.androidx.room.compiler)
+
+    // Kotlin Extensions and Coroutines support for Room
+    implementation(libs.androidx.room.ktx)
+
+    // Coroutines
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.android)
+
+    // Coroutine Lifecycle Scopes
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+
+    // Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.logging.interceptor)
+
+    // Glide
+    implementation(libs.glide)
+    kapt(libs.compiler)
+
+
+    // Local Unit Tests
+    implementation (libs.androidx.core)
+    testImplementation (libs.junit)
+    testImplementation (libs.hamcrest.all)
+    testImplementation (libs.androidx.core.testing)
+    testImplementation (libs.robolectric)
+    testImplementation (libs.kotlinx.coroutines.test)
+    testImplementation (libs.truth)
+    testImplementation (libs.mockito.core)
+
+    // Instrumented Unit Tests
+    androidTestImplementation (libs.junit)
+//    androidTestImplementation (libs.dexmaker.mockito)
+    androidTestImplementation (libs.kotlinx.coroutines.test)
+    androidTestImplementation (libs.androidx.core.testing)
+    androidTestImplementation (libs.truth)
+    androidTestImplementation (libs.androidx.junit)
+    androidTestImplementation (libs.androidx.espresso.core)
+    androidTestImplementation (libs.mockito.core)
+
 }
