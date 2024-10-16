@@ -1,4 +1,4 @@
-package com.example.shoppinglistapp
+package com.example.shoppinglistapp.other
 
 object Constants {
     const val PIXABAY_API_KEY = "46526350-fd610754acae9baf21fcb146c"

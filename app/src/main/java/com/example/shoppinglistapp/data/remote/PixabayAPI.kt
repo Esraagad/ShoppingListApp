@@ -1,6 +1,6 @@
 package com.example.shoppinglistapp.data.remote
 
-import com.example.shoppinglistapp.Constants
+import com.example.shoppinglistapp.other.Constants
 import com.example.shoppinglistapp.data.remote.responses.ImageResponse
 import retrofit2.Response
 import retrofit2.http.GET

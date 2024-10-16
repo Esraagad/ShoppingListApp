@@ -2,7 +2,7 @@ package com.example.shoppinglistapp.di
 import android.content.Context
 import androidx.room.Room
 import com.androiddevs.shoppinglisttestingyt.data.local.ShoppingItemDatabase
-import com.example.shoppinglistapp.Constants
+import com.example.shoppinglistapp.other.Constants
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

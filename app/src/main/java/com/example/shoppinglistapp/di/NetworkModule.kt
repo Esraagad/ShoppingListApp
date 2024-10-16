@@ -1,6 +1,6 @@
 package com.example.shoppinglistapp.di
 
-import com.example.shoppinglistapp.Constants
+import com.example.shoppinglistapp.other.Constants
 import com.example.shoppinglistapp.data.remote.PixabayAPI
 import dagger.Module
 import dagger.Provides
