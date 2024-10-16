@@ -1,10 +1,8 @@
-package com.example.shoppinglistapp
+package com.example.shoppinglistapp.ui
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.example.shoppinglistapp.R
 
 class MainActivity : AppCompatActivity() {
 
